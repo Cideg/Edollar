@@ -37,15 +37,15 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(18446744073709551615);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
-const size_t ZAWY_DIFFICULTY_V2                              = 0;
-const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION       = 1;
-
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 2;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
-
-const uint64_t DIFFICULTY_WINDOW_V3                          = 60;
-const uint64_t DIFFICULTY_BLOCKS_COUNT_V3                    = DIFFICULTY_WINDOW_V3 + 1;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 = 30;
+const uint32_t ZAWY_DIFFICULTY_LAST_BLOCK                 = 0;
+const uint64_t ZAWY_DIFFICULTY_MIN                 = 1;
+const uint32_t ZAWY_LWMA2_DIFFICULTY_BLOCK_INDEX                 = 0;
+const uint32_t ZAWY_LWMA2_DIFFICULTY_LAST_BLOCK                 = 0;
+const uint64_t ZAWY_LWMA2_DIFFICULTY_MIN                 = 1;
+const size_t ZAWY_LWMA2_DIFFICULTY_N                 = 0;
+const uint32_t POW_CRYPTONIGHT_V7_BLOCK_INDEX                 = 0;
+const uint32_t POW_CRYPTONIGHT_V7_LAST_BLOCK                 = 0;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
