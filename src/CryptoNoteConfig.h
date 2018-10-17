@@ -49,7 +49,7 @@ const uint64_t DIFFICULTY_BLOCKS_COUNT_V3                    = DIFFICULTY_WINDOW
 
 const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
-const char     GENESIS_COINBASE_TX_HEX[]                     = "
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(10000000000000000);
 
