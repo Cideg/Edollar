@@ -46,7 +46,7 @@ const uint64_t ZAWY_LWMA2_DIFFICULTY_MIN                 = 1;
 const size_t ZAWY_LWMA2_DIFFICULTY_N                 = 0;
 const uint32_t POW_CRYPTONIGHT_V7_BLOCK_INDEX                 = 0;
 const uint32_t POW_CRYPTONIGHT_V7_LAST_BLOCK                 = 0;
-
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 const char     GENESIS_COINBASE_TX_HEX[]                     = "";
