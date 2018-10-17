@@ -20,6 +20,8 @@
 #include <cstddef>
 #include <cstdint>
 #include <limits>
+#include <initializer_list>
+#include <boost/uuid/uuid.hpp>
 
 namespace CryptoNote {
 namespace parameters {
@@ -35,18 +37,21 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(18446744073709551615);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 = 30;
-const uint32_t ZAWY_DIFFICULTY_LAST_BLOCK                 = 0;
-const uint64_t ZAWY_DIFFICULTY_MIN                 = 1;
-const uint32_t ZAWY_LWMA2_DIFFICULTY_BLOCK_INDEX                 = 0;
-const uint32_t ZAWY_LWMA2_DIFFICULTY_LAST_BLOCK                 = 0;
-const uint64_t ZAWY_LWMA2_DIFFICULTY_MIN                 = 1;
-const size_t ZAWY_LWMA2_DIFFICULTY_N                 = 0;
-const uint32_t POW_CRYPTONIGHT_V7_BLOCK_INDEX                 = 0;
-const uint32_t POW_CRYPTONIGHT_V7_LAST_BLOCK                 = 0;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
+const size_t ZAWY_DIFFICULTY_V2                              = 0;
+const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION       = 1;
+
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 2;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
+
+const uint64_t DIFFICULTY_WINDOW_V3                          = 60;
+const uint64_t DIFFICULTY_BLOCKS_COUNT_V3                    = DIFFICULTY_WINDOW_V3 + 1;
+
 const unsigned EMISSION_SPEED_FACTOR                         = 24;
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
+const char     GENESIS_COINBASE_TX_HEX[]                     = "
+/* Premine amount */
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(10000000000000000);
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 64000; //size of block (bytes) after which reward for block calculated using block size
@@ -89,6 +94,8 @@ const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
 const uint32_t UPGRADE_HEIGHT_V2                                = 1;
 const uint32_t UPGRADE_HEIGHT_V3                                = 2;
+const uint32_t UPGRADE_HEIGHT_V4                             = 1;
+const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V4;
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
