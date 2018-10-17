@@ -1,5 +1,5 @@
 all: all-release
-chmod -R 777 *
+
 cmake-debug-static:
 	mkdir -p build/debug
 	cd build/debug && cmake -D STATIC=ON -D CMAKE_BUILD_TYPE=Debug ../..
