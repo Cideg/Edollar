@@ -51,7 +51,7 @@ const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
+
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 64000; //size of block (bytes) after which reward for block calculated using block size
